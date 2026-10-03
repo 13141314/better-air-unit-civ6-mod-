@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  <!-- 给所有飞机加一个隐藏能力：移动后仍可攻击
+       （引擎是否要求这个开关不确定，加上它作为保险，纯数值无副作用） -->
+  <Types>
+    <Row Type="ABILITY_BETTER_AIR_MOVE_AND_ATTACK" Kind="KIND_ABILITY"/>
+    <Row Type="ABILITY_BETTER_AIR_SQUADRON" Kind="KIND_ABILITY"/>
+    <Row Type="ABILITY_BETTER_AIR_ACE" Kind="KIND_ABILITY"/>
+    <Row Type="ABILITY_BETTER_AIR_AA_INTERCEPT" Kind="KIND_ABILITY"/>
+    <!-- 防空单位"军队"补差：引擎自己已经给军团/军队各 +7
+         （COMBAT_CORPS_ANTIAIR_STRENGTH_MODIFIER / COMBAT_ARMY_ANTIAIR_STRENGTH_MODIFIER = 7），
+         所以这里只补 +8 → 面板合计 +15，与 BAU 的"军团 +7 / 军队 +15"承诺一致 -->
+    <Row Type="ABILITY_BETTER_AIR_AA_ACE" Kind="KIND_ABILITY"/>
+  </Types>
+
+  <Modifiers>
+    <Row ModifierId="BETTER_AIR_MOVE_AND_ATTACK"
+         ModifierType="MODIFIER_PLAYER_UNIT_ADJUST_MOVE_AND_ATTACK"/>
+    <Row ModifierId="BETTER_AIR_SQUADRON_COMBAT"
+         ModifierType="MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH"/>
+    <Row ModifierId="BETTER_AIR_ACE_COMBAT_EXTRA"
+         ModifierType="MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH"/>
+    <Row ModifierId="BETTER_AIR_AA_ACE_COMBAT"
+         ModifierType="MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH"/>
+  </Modifiers>
+
+  <TypeTags>
+    <Row Type="ABILITY_BETTER_AIR_MOVE_AND_ATTACK" Tag="CLASS_AIRCRAFT"/>
+    <Row Type="ABILITY_BETTER_AIR_SQUADRON" Tag="CLASS_AIRCRAFT"/>
+    <Row Type="ABILITY_BETTER_AIR_ACE" Tag="CLASS_AIRCRAFT"/>
+    <!-- 纯文本标记能力，授予原版 CLASS_ANTI_AIR 的陆军/海军防空单位（与原版 ABILITY_ANTI_AIR_COVER 同款做法） -->
+    <Row Type="ABILITY_BETTER_AIR_AA_INTERCEPT" Tag="CLASS_ANTI_AIR"/>
+    <!-- 关键：ACE/SQUADRON 原本只挂 CLASS_AIRCRAFT，所以防空单位的
+         SyncFormationAbilities 是**空操作**（能力没挂到单位上，改计数无效）——
+         这就是"防空炮军队面板只显示 97(=90+7) 而不是 105"的原因 -->
+    <Row Type="ABILITY_BETTER_AIR_AA_ACE" Tag="CLASS_ANTI_AIR"/>
+  </TypeTags>
+
+  <UnitAbilities>
+    <Row UnitAbilityType="ABILITY_BETTER_AIR_MOVE_AND_ATTACK"
+         Name="LOC_ABILITY_BETTER_AIR_MOVE_AND_ATTACK_NAME"
+         Description="LOC_ABILITY_BETTER_AIR_MOVE_AND_ATTACK_DESCRIPTION"/>
+    <Row UnitAbilityType="ABILITY_BETTER_AIR_SQUADRON"
+         Name="LOC_ABILITY_BETTER_AIR_SQUADRON_NAME"
+         Description="LOC_ABILITY_BETTER_AIR_SQUADRON_DESCRIPTION"/>
+    <Row UnitAbilityType="ABILITY_BETTER_AIR_ACE"
+         Name="LOC_ABILITY_BETTER_AIR_ACE_NAME"
+         Description="LOC_ABILITY_BETTER_AIR_ACE_DESCRIPTION"/>
+    <Row UnitAbilityType="ABILITY_BETTER_AIR_AA_INTERCEPT"
+         Name="LOC_ABILITY_BETTER_AIR_AA_INTERCEPT_NAME"
+         Description="LOC_ABILITY_BETTER_AIR_AA_INTERCEPT_DESCRIPTION"/>
+    <Row UnitAbilityType="ABILITY_BETTER_AIR_AA_ACE"
+         Name="LOC_ABILITY_BETTER_AIR_ACE_NAME"
+         Description="LOC_ABILITY_BETTER_AIR_ACE_DESCRIPTION"/>
+  </UnitAbilities>
+
+  <UnitAbilityModifiers>
+    <Row UnitAbilityType="ABILITY_BETTER_AIR_MOVE_AND_ATTACK"
+         ModifierId="BETTER_AIR_MOVE_AND_ATTACK"/>
+    <Row UnitAbilityType="ABILITY_BETTER_AIR_SQUADRON"
+         ModifierId="BETTER_AIR_SQUADRON_COMBAT"/>
+    <Row UnitAbilityType="ABILITY_BETTER_AIR_ACE"
+         ModifierId="BETTER_AIR_ACE_COMBAT_EXTRA"/>
+    <Row UnitAbilityType="ABILITY_BETTER_AIR_AA_ACE"
+         ModifierId="BETTER_AIR_AA_ACE_COMBAT"/>
+  </UnitAbilityModifiers>
+
+  <ModifierArguments>
+    <Row ModifierId="BETTER_AIR_MOVE_AND_ATTACK"
+         Name="CanAttack"
+         Value="1"/>
+    <Row ModifierId="BETTER_AIR_SQUADRON_COMBAT"
+         Name="Amount"
+         Value="7"/>
+    <!-- 军队：总加成 +15（升级成军队时会先摘掉机群的 +7，保证单位身上永远只有一个
+         MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH —— 实测两条同类修正不会叠加，面板只认一条） -->
+    <Row ModifierId="BETTER_AIR_ACE_COMBAT_EXTRA"
+         Name="Amount"
+         Value="15"/>
+    <!-- 防空军队：引擎 +7 已含，这里只补差额 8 → 合计 +15 -->
+    <Row ModifierId="BETTER_AIR_AA_ACE_COMBAT"
+         Name="Amount"
+         Value="8"/>
+  </ModifierArguments>
+</GameData>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  <LocalizedText>
+    <Row Tag="LOC_ABILITY_BETTER_AIR_MOVE_AND_ATTACK_NAME" Language="zh_Hans_CN">
+      <Text>机动空袭</Text>
+    </Row>
+    <Row Tag="LOC_ABILITY_BETTER_AIR_MOVE_AND_ATTACK_DESCRIPTION" Language="zh_Hans_CN">
+      <Text>改变基地后仍可进行空袭。</Text>
+    </Row>
+    <Row Tag="LOC_ABILITY_BETTER_AIR_MOVE_AND_ATTACK_NAME" Language="en_US">
+      <Text>Mobile Air Strikes</Text>
+    </Row>
+    <Row Tag="LOC_ABILITY_BETTER_AIR_MOVE_AND_ATTACK_DESCRIPTION" Language="en_US">
+      <Text>May perform an air strike after rebasing.</Text>
+    </Row>
+    <Row Tag="LOC_ABILITY_BETTER_AIR_SQUADRON_NAME" Language="zh_Hans_CN">
+      <Text>机群</Text>
+    </Row>
+    <Row Tag="LOC_ABILITY_BETTER_AIR_SQUADRON_DESCRIPTION" Language="zh_Hans_CN">
+      <Text>由 2 架同型飞机构成，强度 +7。</Text>
+    </Row>
+    <Row Tag="LOC_ABILITY_BETTER_AIR_ACE_NAME" Language="zh_Hans_CN">
+      <Text>王牌机队</Text>
+    </Row>
+    <Row Tag="LOC_ABILITY_BETTER_AIR_ACE_DESCRIPTION" Language="zh_Hans_CN">
+      <Text>由 3 架同型飞机构成，强度 +15（编入军队后不再叠加机群的 +7）。</Text>
+    </Row>
+    <Row Tag="LOC_ABILITY_BETTER_AIR_SQUADRON_NAME" Language="en_US">
+      <Text>Squadron</Text>
+    </Row>
+    <Row Tag="LOC_ABILITY_BETTER_AIR_SQUADRON_DESCRIPTION" Language="en_US">
+      <Text>Formed from 2 aircraft of the same type. +7 Strength.</Text>
+    </Row>
+    <Row Tag="LOC_ABILITY_BETTER_AIR_ACE_NAME" Language="en_US">
+      <Text>Ace Wing</Text>
+    </Row>
+    <Row Tag="LOC_ABILITY_BETTER_AIR_ACE_DESCRIPTION" Language="en_US">
+      <Text>Formed from 3 aircraft of the same type. +15 Strength (replaces the Squadron bonus).</Text>
+    </Row>
+    <Row Tag="LOC_ABILITY_BETTER_AIR_AA_INTERCEPT_NAME" Language="zh_Hans_CN">
+      <Text>主动截击</Text>
+    </Row>
+    <Row Tag="LOC_ABILITY_BETTER_AIR_AA_INTERCEPT_DESCRIPTION" Language="zh_Hans_CN">
+      <Text>本模组新增：可主动攻击射程内的敌方空军单位。伤害按原版战斗公式结算（防空战力对比飞机战力），开火消耗本回合行动。AI 暂不会主动使用此能力。</Text>
+    </Row>
+    <Row Tag="LOC_ABILITY_BETTER_AIR_AA_INTERCEPT_NAME" Language="en_US">
+      <Text>Active Interception</Text>
+    </Row>
+    <Row Tag="LOC_ABILITY_BETTER_AIR_AA_INTERCEPT_DESCRIPTION" Language="en_US">
+      <Text>New in this mod: may attack enemy aircraft within range. Damage is resolved with the vanilla combat formula (anti-air strength vs aircraft strength). Firing consumes this turn's action. The AI does not yet use this.</Text>
+    </Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_TOGGLE_ON" Language="zh_Hans_CN"><Text>机位租借：请求中（点击取消）</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_TOGGLE_OFF" Language="zh_Hans_CN"><Text>机位租借：点击请求进驻</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_INCOMING" Language="zh_Hans_CN"><Text>同意对方租用我方机位（点击）</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_MYGRANT" Language="zh_Hans_CN"><Text>已租机位给对方（点击收回）</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_THEIRGRANT" Language="zh_Hans_CN"><Text>对方已开放机位 ✓</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_TT" Language="zh_Hans_CN"><Text>点击后向对方发出机位租借请求（仅人类玩家之间可租借）。对方在其交易界面的“协议”列表点击同意后，你的飞机即可部署进驻对方的航空港、市中心或跑道（含相邻格）。战争期间租借自动暂停，恢复和平自动生效；可随时点击取消请求。</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_INCOMING_TT" Language="zh_Hans_CN"><Text>点击即刻开放：对方的飞机即可把基地进驻你的航空港/市中心/跑道（含相邻格）。战争期间自动暂停，恢复和平自动生效；可随时点击收回。</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_REJECT" Language="zh_Hans_CN"><Text>拒绝机位租借请求（点击）</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_REJECT_TT" Language="zh_Hans_CN"><Text>拒绝并撤回对方的请求；不影响其之后再次发起请求。</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_MYGRANT_TT" Language="zh_Hans_CN"><Text>收回后，对方停在我方地块上的飞机基地锚点会在下个回合开始时移回其所在位置。</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_THEIRGRANT_TT" Language="zh_Hans_CN"><Text>选中飞机 → 部署，右键点击对方的航空港/市中心/跑道即可进驻并把基地迁过去。</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_TOGGLE_ON" Language="en_US"><Text>Slot Lease: request active (click to cancel)</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_TOGGLE_OFF" Language="en_US"><Text>Slot Lease: click to request basing</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_INCOMING" Language="en_US"><Text>Agree to lease your slots (click)</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_MYGRANT" Language="en_US"><Text>Slots leased to them (click to revoke)</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_THEIRGRANT" Language="en_US"><Text>Their airfields are open to you ✓</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_TT" Language="en_US"><Text>Click to send a slot-lease request (human players only). Once they click Agree in the Agreements list of their deal screen, your aircraft may deploy onto their aerodromes, city centers or runways (incl. adjacent tiles). Suspended automatically during war; resumes in peace. Cancel anytime.</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_INCOMING_TT" Language="en_US"><Text>Click to grant immediately: their aircraft may base on your aerodromes / city centers / runways (incl. adjacent tiles). Paused during war; resumes in peace. Revoke anytime.</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_REJECT" Language="en_US"><Text>Decline the slot-lease request (click)</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_REJECT_TT" Language="en_US"><Text>Refuse and withdraw their request; they may ask again later.</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_MYGRANT_TT" Language="en_US"><Text>After revoking, foreign aircraft parked on your tiles get their base anchor moved at the start of the next turn.</Text></Row>
+    <Row Tag="LOC_BETTER_AIR_RENT_THEIRGRANT_TT" Language="en_US"><Text>Select an aircraft, choose Deploy, right-click their aerodrome / city center / runway to rebase there.</Text></Row>
+  </LocalizedText>
+</GameData>
